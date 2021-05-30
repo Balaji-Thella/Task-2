@@ -15,7 +15,8 @@ function DateFormat(date) {
   return strTime;
 }
 
-cron.schedule("*/5 * * * *", () => {
+// cron.schedule("*/5 * * * *", () => {
+cron.schedule("* * * * *", () => {
   console.log("CRON STARTED", DateFormat(new Date()));
   let dateNow = new Date();
   let dateAfter = new Date(dateNow.getTime() + 5 * 60000);
